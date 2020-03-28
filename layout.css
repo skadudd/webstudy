@@ -1,28 +1,31 @@
 div {box-sizing: border-box; }
 
-.notion {display:flex;}
-
+.notion { display:flex; box-sizing:}
+.on-card-click-modal { display: none; position: fixed; z-index:1000; width:100%; height:100%; background-color: rgb(0, 0, 0, 0.5); }
+/* 1 */
+.clicked-card-container { display:flex; flex-direction: column; position: absolute; z-index:2000; margin-left: auto; margin-right: auto; top:72px; left:72px; right:72px; height: calc(100vh - 144px); max-width: 983px; background-color:white }
+/* 2 */
+.clicked-card-body { width: 100%; height:100% }
 /* 1 */
 .side-navigation-container { overflow: hidden; height:100vh; width:240px;  background-color:sandybrown; }
-.contents-container {overflow: hidden; height: 100vh; width: calc(100vw - 240px); background-color: antiquewhite;}
+.contents-container { overflow: hidden; height: 100vh; width: calc(100vw - 240px); background-color: antiquewhite;}
 /* 2 */
-.contents-header { display: flex; height: 45px; width: 100%;  }
+.contents-header { height: 45px; width: 100%;  }
+
 
 /* display flex; flex-direction: column 지우면 정상적으로 작동함 */
 .contents-body-scroller { display: flex; flex-direction: column; overflow: auto; height: 100%; width:100%; background-color: gray;}
 /* 3 */
 .body-banner { height:177px;  background-color: azure; }
 .body-option { height:42px; width:100%; background-color: beige; }
-.body-scroller { display: flex; left:0px; top: 0px;}
+.body-scroller { display: flex; overflow: auto; left:0px; top: 0px;}
+.scroller-board-view-box { float: left; padding-left: 96px; padding-right: 96px; }
 /* 4 */
-.scroller-board-view-box { float: left; padding-left: 96px; padding-right: 96px; min-width: 100%; }
 /* 5 */
 .board-view-user-table { display:flex; position: relative; padding-bottom: 180px;}
 /* 6 */
 .absolute-sticky-header { position: absolute; }
 .contents-block { display: inline-flex; }
-.contents-block-hidden-columns {  }
-.contents-block-add-columns {  }
 /* 7 */
 .card-group { box-sizing: content-box; flex: auto;  padding-right: 16px; width: 260px;  height:auto; background-color: blanchedalmond;}
 /* 8 */
@@ -33,4 +36,16 @@ div {box-sizing: border-box; }
 /* 7 */
 .contents-block-hidden-columns { width: 220px; margin-top: 44px; background-color: antiquewhite;}
 .contents-block-add-columns { width: 180px; margin-top: 44px; background-color: antiquewhite;}
+/* 8 card-style */
+.card-body {display:block; box-sizing:border-box; width:260px; height:125px; border:1px solid; border-color:gray; border-radius:3px; position:relative; background-color:azure}
+.card-title-wrapper {overflow:hidden; width:240px; height:auto; padding: 8px 10px 10px;}
+.card-title {float:left; position:relative; white-space:pre-wrap; word-break:break-word;}
+.card-tag-body {padding-left: 10px; padding-right:10px; width:100%; height: 24px; box-sizing:border-box;}
+.card-tag-wrapper {display:flex; flex-wrap: wrap;}
+.card-tag-wrapper-2 {height:18px; width:54px; margin:0px 6px 6px 0px; min-width:0px; padding-left:6px; padding-right:6px; border:1px solid; border-radius:3px; border-color:aquamarine}
+.card-tag {white-space:no-wrap; overflow:hidden; text-overflow:ellipsis;}
+.card-contents-body {width:260px; height:auto; padding-bottom:4px; box-sizing:border-box;}
+.card-contents-wrapper {box-sizing:border-box; height:58px; width:260px; padding-left:10px; padding-right:10px;}
+.card-contents {word-break: break-word; white-space:pre-wrap; }
 
+.card-button
