@@ -1,0 +1,14 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "test:1": "jest filterAndMap.test/",
+    "test:2": "jest functionCaculator.test/"
+  },
+  "devDependencies": {
+    "jest": "^25.3.0"
+  }
+}

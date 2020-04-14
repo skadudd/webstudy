@@ -32,7 +32,7 @@ const cardElements = {
         console.log("d")
         modal_element.style.display = "flex";
     }
-    
+
     function createElements() {
 
         //객체에 저장한 key의 갯수 만큼 div를 생성합니다
